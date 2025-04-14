@@ -156,10 +156,8 @@
     </section>
     
     <section>
-        <h1>Our Products</h1>
         <h2>Space Cat Games - The best way to host a games website!</h2>
         <h2>Project Nijika - [It's on its way!]</h2>
-        <h2></h2>
     </section>
 
     <section>
@@ -176,7 +174,7 @@
         <div class="discord-widget">
             <div class="widget-header">
                 <img src="https://cdn.discordapp.com/avatars/913798931949965362/431425b2e5c3e2b42b061924ffd90004.webp" alt="MeowCat's Profile" class="discord-icon">
-                <h3>Meowcat</h3>
+                <h3>MeowCat</h3>
             </div>
             <p>Discord Profile: <a href="https://discord.com/users/913798931949965362" target="_blank">Visit Profile</a></p>
             <p>Website: <a href="https://meowcat.ct.ws" target="_blank">https://meowcat.ct.ws</a></p>
@@ -189,33 +187,6 @@
             </div>
             <p>Discord Profile: <a href="https://discord.com/users/1348440369733439629" target="_blank">Visit Profile</a></p>
             <p>Website: <a href="https://quantum.is-a.dev" target="_blank">https://quantum.is-a.dev</a></p>
-            <script>// Authorization token that must have been created previously. See : https://developer.spotify.com/documentation/web-api/concepts/authorization
-                const token = 'BQDOPmdOSd5F23W0tsnbPVGhNeDFpUNRE8CPW3jC0DmhwWofY9VXawVzZZ3BmVA4jzgwg7erVseiYPJVw7UV2oqQlA-grD51LDAJ26x9drd5Zoh1glU34fHU4Vy4CsptyFE37mYyICdU5X7afZotXjeSKrf0XRQSRPXnofx7jS6OOGZXmctk7pousouhfcellT3gNpFLLK31X1kkkbN5Z9PfzsB3jGFn2yUyAwH-2PYbhY4gQoiPlrEGJ2Wa_4UsBwmc9WmTHpEQjw2HH5CkJ-1ya-XJ6SQHOEVgsYgotzhxWiOdbRsd5Kzy7pgW';
-                async function fetchWebApi(endpoint, method, body) {
-                  const res = await fetch(`https://api.spotify.com/${endpoint}`, {
-                    headers: {
-                      Authorization: `Bearer ${token}`,
-                    },
-                    method,
-                    body:JSON.stringify(body)
-                  });
-                  return await res.json();
-                }
-                
-                async function getTopTracks(){
-                  // Endpoint reference : https://developer.spotify.com/documentation/web-api/reference/get-users-top-artists-and-tracks
-                  return (await fetchWebApi(
-                    'v1/me/top/tracks?time_range=long_term&limit=5', 'GET'
-                  )).items;
-                }
-                
-                const topTracks = await getTopTracks();
-                console.log(
-                  topTracks?.map(
-                    ({name, artists}) =>
-                      `${name} by ${artists.map(artist => artist.name).join(', ')}`
-                  )
-                );</script>
         </div>
     </section>
 
