@@ -127,12 +127,12 @@
 
     <header>
         <img src="https://avatars.githubusercontent.com/u/205366207?s=200&v=4" alt="Starry Systems Logo" />
-        <h1>Starry Systems</h1>
-        <p>Web Excellence since 2022</p>
+        <h1>スターリーシステムズ</h1>
+        <p>ウェブエクセレンス 2022年から</p>
     </header>
 
     <section id="ad-container">
-        <p>Our Partners Ads:</p>
+        <p>私たちのパートナーの広告:</p>
         <a id="ad-link" href="#" target="_blank">
             <img id="ad-image" src="" alt="Advertisement">
         </a>
@@ -140,37 +140,37 @@
     </section>
 
     <section>
-        <h2>Why Choose Starry Systems?</h2>
+        <h2>なぜスターリーシステムズを選ぶのか？</h2>
         <ul>
-            <li>Tailored Solutions – Websites designed to fit your exact needs.</li>
-            <li>Modern & Responsive – Seamless experience across all devices.</li>
-            <li>Optimized for Performance – Fast, secure, and built to last.</li>
-            <li>Cutting-Edge Technology – Built using the latest web standards.</li>
+            <li>カスタマイズされたソリューション – あなたの正確なニーズに合わせて設計されたウェブサイト。</li>
+            <li>現代的でレスポンシブ – すべてのデバイスでシームレスな体験。</li>
+            <li>パフォーマンスに最適化 - 高速で安全、そして持続可能です。</li>
+            <li>最先端のテクノロジー – 最新のウェブ標準を使用して構築されています。</li>
         </ul>
     </section>
 
     <section>
-        <h2>Transform Your Online Experience</h2>
-        <p>From dynamic landing pages to full-scale platforms, we craft powerful digital solutions that leave a lasting impression.</p>
-        <p>Your next-level website starts here. Let’s build something amazing together!</p>
+        <h2>オンライン体験を変革する</h2>
+        <p>動的ランディングページからフルスケールのプラットフォームまで、私たちは強力なデジタルソリューションを作成し、印象に残る体験を提供します。</p>
+        <p>あなたの次のレベルのウェブサイトはここから始まります。一緒に素晴らしいものを作りましょう！</p>
     </section>
     
     <section>
-        <h1>Our Products</h1>
-        <h2>Space Cat Games - The best way to host a games website!</h2>
-        <h2>Project Nijika - [It's on its way!]</h2>
+        <h1>私たちの製品</h1>
+        <h2>スペースキャットゲームズ - ゲームウェブサイトをホストする最適な方法！</h2>
+        <h2>プロジェクトにじかちゃん - [もうすぐ届きます！]</h2>
         <h2></h2>
     </section>
 
     <section>
-        <h2>Owners:</h2>
+        <h2>所有者:</h2>
         <div class="discord-widget">
             <div class="widget-header">
                 <img src="https://media.discordapp.net/attachments/1348749264590995587/1355900211284807700/Untitled_design.png?ex=67ed3ef9&is=67ebed79&hm=c4f675c0d3bd1047d7e5e050b4a37ee6453f266aff8394d822d55cc8b701c415&=&format=webp&quality=lossless" alt="Noah's Profile" class="discord-icon">
                 <h3>Noah</h3>
             </div>
-            <p>Discord Profile: <a href="https://discord.com/users/1335719497293758477" target="_blank">Visit Profile</a></p>
-            <p>Website: <a href="https://guns.lol/noahcode" target="_blank">https://guns.lol/noahcode</a></p>
+            <p>Discordプロフィール: <a href="https://discord.com/users/1335719497293758477" target="_blank">Visit Profile</a></p>
+            <p>ウェブサイト: <a href="https://guns.lol/noahcode" target="_blank">https://guns.lol/noahcode</a></p>
         </div>
 
         <div class="discord-widget">
@@ -178,8 +178,40 @@
                 <img src="https://cdn.discordapp.com/avatars/913798931949965362/431425b2e5c3e2b42b061924ffd90004.webp" alt="MeowCat's Profile" class="discord-icon">
                 <h3>Meowcat</h3>
             </div>
-            <p>Discord Profile: <a href="https://discord.com/users/913798931949965362" target="_blank">Visit Profile</a></p>
-            <p>Website: <a href="https://meowcat.ct.ws" target="_blank">https://meowcat.ct.ws</a></p>
+            <p>Discordプロフィール: <a href="https://discord.com/users/913798931949965362" target="_blank">Visit Profile</a></p>
+            <p>ウェブサイト: <a href="https://meowcat.ct.ws" target="_blank">https://meowcat.ct.ws</a></p>
+            <script>
+                const adsUrl = "https://script.google.com/macros/s/AKfycby90aBPplIVpVRPnRbMYmhe1ynCREj-75RBjt46fyjWL7zsT0BjwARRoD3ei5dU-YgHKg/exec";
+        
+                let ads = [];
+                let currentIndex = 0;
+        
+                function fetchAds() {
+                    fetch(adsUrl)
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.length > 0) {
+                                ads = data;
+                                rotateAds();
+                                setInterval(rotateAds, 5000); // Change ad every 5 seconds
+                            }
+                        })
+                        .catch(error => console.error("Error fetching ads:", error));
+                }
+        
+                function rotateAds() {
+                    if (ads.length === 0) return;
+        
+                    const ad = ads[currentIndex];
+                    document.getElementById("ad-image").src = ad.image;
+                    document.getElementById("ad-link").href = ad.link;
+                    document.getElementById("ad-text").innerText = ad.text;
+        
+                    currentIndex = (currentIndex + 1) % ads.length;
+                }
+        
+                fetchAds();
+            </script>
         </div>
 
         <div class="discord-widget">
@@ -187,70 +219,13 @@
                 <img src="https://quantum.is-a.dev/images/quantum.png" alt="QuantumDev's Profile" class="discord-icon">
                 <h3>QuantumDev</h3>
             </div>
-            <p>Discord Profile: <a href="https://discord.com/users/1348440369733439629" target="_blank">Visit Profile</a></p>
-            <p>Website: <a href="https://quantum.is-a.dev" target="_blank">https://quantum.is-a.dev</a></p>
-            <script>// Authorization token that must have been created previously. See : https://developer.spotify.com/documentation/web-api/concepts/authorization
-                const token = 'BQDOPmdOSd5F23W0tsnbPVGhNeDFpUNRE8CPW3jC0DmhwWofY9VXawVzZZ3BmVA4jzgwg7erVseiYPJVw7UV2oqQlA-grD51LDAJ26x9drd5Zoh1glU34fHU4Vy4CsptyFE37mYyICdU5X7afZotXjeSKrf0XRQSRPXnofx7jS6OOGZXmctk7pousouhfcellT3gNpFLLK31X1kkkbN5Z9PfzsB3jGFn2yUyAwH-2PYbhY4gQoiPlrEGJ2Wa_4UsBwmc9WmTHpEQjw2HH5CkJ-1ya-XJ6SQHOEVgsYgotzhxWiOdbRsd5Kzy7pgW';
-                async function fetchWebApi(endpoint, method, body) {
-                  const res = await fetch(`https://api.spotify.com/${endpoint}`, {
-                    headers: {
-                      Authorization: `Bearer ${token}`,
-                    },
-                    method,
-                    body:JSON.stringify(body)
-                  });
-                  return await res.json();
-                }
-                
-                async function getTopTracks(){
-                  // Endpoint reference : https://developer.spotify.com/documentation/web-api/reference/get-users-top-artists-and-tracks
-                  return (await fetchWebApi(
-                    'v1/me/top/tracks?time_range=long_term&limit=5', 'GET'
-                  )).items;
-                }
-                
-                const topTracks = await getTopTracks();
-                console.log(
-                  topTracks?.map(
-                    ({name, artists}) =>
-                      `${name} by ${artists.map(artist => artist.name).join(', ')}`
-                  )
-                );</script>
+            <p>Discordプロフィール: <a href="https://discord.com/users/1348440369733439629" target="_blank">Visit Profile</a></p>
+            <p>ウェブサイト: <a href="https://quantum.is-a.dev" target="_blank">https://quantum.is-a.dev</a></p>
+           
         </div>
     </section>
 
-    <script>
-        const adsUrl = "https://script.google.com/macros/s/AKfycby90aBPplIVpVRPnRbMYmhe1ynCREj-75RBjt46fyjWL7zsT0BjwARRoD3ei5dU-YgHKg/exec";
-
-        let ads = [];
-        let currentIndex = 0;
-
-        function fetchAds() {
-            fetch(adsUrl)
-                .then(response => response.json())
-                .then(data => {
-                    if (data.length > 0) {
-                        ads = data;
-                        rotateAds();
-                        setInterval(rotateAds, 5000); // Change ad every 5 seconds
-                    }
-                })
-                .catch(error => console.error("Error fetching ads:", error));
-        }
-
-        function rotateAds() {
-            if (ads.length === 0) return;
-
-            const ad = ads[currentIndex];
-            document.getElementById("ad-image").src = ad.image;
-            document.getElementById("ad-link").href = ad.link;
-            document.getElementById("ad-text").innerText = ad.text;
-
-            currentIndex = (currentIndex + 1) % ads.length;
-        }
-
-        fetchAds();
-    </script>
+   
 
 </body>
 </html>
